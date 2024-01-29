@@ -3,9 +3,8 @@
 import { CarCardProps } from "@/types";
 import { calculateCarRent } from "@/utils";
 import Image from "next/image";
-import { CustomButton } from "@/components";
+import { CarDetails, CustomButton } from "@/components";
 import { useState } from "react";
-import { CarDetails } from "@/components/CarDetails/CarDetails";
 
 type Props = {
   car: CarCardProps;
@@ -17,8 +16,13 @@ export const CarCard = ({ car }: Props) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClickIsOpenHandler = () => {};
-  const handleCloseModal = () => {};
+  const handleClickIsOpenHandler = () => {
+    setIsOpen(true);
+  };
+
+  const closeModalHandler = () => {
+    setIsOpen(false);
+  };
 
   return (
     <div className="car-card group">
@@ -80,7 +84,7 @@ export const CarCard = ({ car }: Props) => {
         </div>
       </div>
 
-      <CarDetails isOpen={isOpen} closeModal={handleCloseModal} car={car}/>
+      <CarDetails isOpen={isOpen} closeModal={closeModalHandler} car={car} />
     </div>
   );
 };
