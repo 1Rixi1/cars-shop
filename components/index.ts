@@ -4,6 +4,7 @@ import { NavBar } from "./NavBar/NavBar";
 import { SearchBar } from "./SearchBar/SearchBar";
 import { CustomFilter } from "./CustomFilter/CustomFilter";
 import { SearchManufacturer } from "./SearchManufacturer/SearchManufacturer";
+import { CarCard } from "./CarCard/CarCard";
 
 export {
   Hero,
@@ -12,4 +13,5 @@ export {
   SearchBar,
   CustomFilter,
   SearchManufacturer,
+  CarCard,
 };
